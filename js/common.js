@@ -14,6 +14,13 @@ $(document).ready(function () {
   	autoplay: true,
   	autoplaySpeed: 2000,
   })
+  let catalog_content = $('.catalog-content')[0]
+  $('.catalog-sort_squares').on('click', function() {
+    $(catalog_content).removeClass('catalog-content-line');
+  })
+  $('.catalog-sort_line').on('click', function() {
+    $(catalog_content).addClass('catalog-content-line');
+  })
   $(document).ready(function () {
       $('.accordion-tabs').children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
       $('.accordion-tabs').on('click', 'li > a', function(event) {
